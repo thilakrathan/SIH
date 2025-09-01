@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FileUploadZone } from "@/components/FileUploadZone";
 import { FileList } from "@/components/FileList";
 import { FileData } from "@/components/FileItem";
+import { ProfileButton } from "@/components/ProfileButton";
 import { toast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -74,14 +75,28 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-2xl mx-auto px-6 py-12">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-2xl font-semibold text-foreground mb-2">
-            Upload Files
-          </h1>
-          <p className="text-muted-foreground">
-            Upload your user-downloadable files.
-          </p>
+        {/* Header with Profile */}
+        <div className="relative mb-8">
+          {/* Profile Button - positioned absolutely to the left */}
+          <div className="absolute left-0 top-0">
+            <ProfileButton 
+              userName="John Doe"
+              onClick={() => toast({
+                title: "Profile",
+                description: "Profile menu clicked",
+              })}
+            />
+          </div>
+          
+          {/* Centered Header Content */}
+          <div className="text-center">
+            <h1 className="text-2xl font-semibold text-foreground mb-2">
+              Upload Files
+            </h1>
+            <p className="text-muted-foreground">
+              Upload your user-downloadable files.
+            </p>
+          </div>
         </div>
 
         {/* Upload Zone */}
