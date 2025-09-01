@@ -52,6 +52,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				upload: {
+					border: 'hsl(var(--upload-border))',
+					hover: 'hsl(var(--upload-hover))',
+					active: 'hsl(var(--upload-active))'
+				},
+				file: {
+					item: 'hsl(var(--file-item))'
+				},
+				progress: {
+					bg: 'hsl(var(--progress-bg))',
+					fill: 'hsl(var(--progress-fill))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
