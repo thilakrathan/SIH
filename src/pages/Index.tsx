@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { FileUploadZone } from "@/components/FileUploadZone";
 import { FileList } from "@/components/FileList";
 import { FileData } from "@/components/FileItem";
@@ -118,8 +119,8 @@ const Index = () => {
           <Button variant="outline" size="lg">
             Back
           </Button>
-          <Button size="lg" className="px-8">
-            Next
+          <Button size="lg" className="px-8" asChild>
+            <Link to="/login">Next</Link>
           </Button>
         </div>
       </div>
